@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfhk0t4ykdb5x"]
+
+[ext_resource type="Texture2D" uid="uid://boagaxkdbn7sh" path="res://icon.svg" id="1_cs16o"]
+[ext_resource type="Shader" path="res://Shaders/main/animated_spinning_clover.gdshader" id="1_rfm00"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yfpm6"]
+shader = ExtResource("1_rfm00")
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_yfpm6")
+position = Vector2(579, 316)
+texture = ExtResource("1_cs16o")
+
+[node name="ColorPicker" type="ColorPicker" parent="."]
+offset_right = 298.0
+offset_bottom = 576.0
+color = Color(0.113725, 0.133333, 0.160784, 1)
