@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxj8ep08wbnm6"
-path="res://.godot/imported/GraphEdit.svg-63bed2479ac717aa6c5096e1ddbef907.ctex"
+uid="uid://be3nwoioa311t"
+path="res://.godot/imported/Play.svg-a446691ffcef211028bb160b5a2d6ff1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/addons/SignalVisualizer/GraphEdit.svg"
-dest_files=["res://.godot/imported/GraphEdit.svg-63bed2479ac717aa6c5096e1ddbef907.ctex"]
+source_file="res://addons/SignalVisualizer/Play.svg"
+dest_files=["res://.godot/imported/Play.svg-a446691ffcef211028bb160b5a2d6ff1.ctex"]
 
 [params]
 
