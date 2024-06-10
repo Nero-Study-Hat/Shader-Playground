@@ -7,5 +7,9 @@ could make conversion from .gdshader to blender shader easier
 [glslTexture](https://github.com/patriciogonzalezvivo/glslTexture)
 
 ### Effects
-- percentage progress bar based on input value
-  out of one hundred that is pretty
+
+#### pretty input percentage based progress bar
+- color 1: glowing outline for the bar
+- color 2: glowing gradient dropshadown for the bar
+- color 3: glowing fill color in the bar for percentage completed
+- color 4: inky void fill color in the bar for percentage not-completed
