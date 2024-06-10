@@ -7,7 +7,8 @@ of exploration for me than a project with features to complete and goals to meet
 It is most important for me to be able to track my progress and the cool stuff that
 comes up along the journey here than separate pieces of work and the like.
 
-###### roadmap ideas
+### Roadmap Ideas
 try out this addon for blender to import/make glsl shader for blender
 could make conversion from .gdshader to blender shader easier
-https://github.com/patriciogonzalezvivo/glslTexture
+
+[glslTexture](https://github.com/patriciogonzalezvivo/glslTexture)
