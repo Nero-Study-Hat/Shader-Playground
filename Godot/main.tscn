@@ -4,7 +4,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ys8wf"]
 shader = ExtResource("1_m6b7j")
-shader_parameter/resolution = Vector2(892, 500)
+shader_parameter/res = Vector2(111, 549)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hnh6q"]
 
@@ -12,6 +12,6 @@ shader_parameter/resolution = Vector2(892, 500)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ys8wf")
-position = Vector2(554.882, 335)
-scale = Vector2(887.607, 500)
+position = Vector2(575, 323.5)
+scale = Vector2(1152, 643)
 texture = SubResource("CanvasTexture_hnh6q")

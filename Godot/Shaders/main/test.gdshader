@@ -1,23 +1,22 @@
 shader_type canvas_item;
+//render_mode world_vertex_coords;
 
 #include "res://Shaders/lib/main.gdshaderinc"
 
-uniform vec2 resolution = vec2(892,500);
+uniform vec2 res = vec2(1152,643);
 
 void vertex() {
-    //if(VERTEX.x > 0.0 && VERTEX.y < 0.0)
-	//{
-		//VERTEX.x += 0.1;
-	//}
 }
 
 void fragment() {
 	vec2 uv = UV - .5;
-	uv.x *= resolution.x / resolution.y;
+	uv.x *= res.x / res.y;
+	COLOR = vec4(uv,0,1);
 	
-	vec2 uvc = UV_generate_from_center(UV,vec2(0),vec2(0),0);
-	
-	vec4 circle = SH_new_circle_flat(uv, 0.1, vec4(1,0,0,1));
+	vec2 bad_uv = UV_generate_from_center(UV, vec2(0),vec2(0),0);
+	//COLOR = vec4(bad_uv,0,1);
+	vec4 circle = SH_new_circle(bad_uv,.9);
+	circle = SH_new_circle(uv,2);
 	COLOR = circle;
 }
 
