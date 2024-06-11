@@ -16,8 +16,12 @@ void fragment() {
 	vec4 circle = SH_new_circle(uvc,0.01);
 	vec4 rec = SH_new_rectangle(uvc,0.01, true);
 	
+	vec2 uv = FRAGCOORD.xy * TEXTURE_PIXEL_SIZE.xy;
+	
 	COLOR = vec4(uvc,0,1);
 	COLOR = circle/rec + circle;
+	
+	COLOR = vec4(uv,0,1);
 	
 }
 

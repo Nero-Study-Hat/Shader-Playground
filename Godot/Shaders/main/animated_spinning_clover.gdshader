@@ -7,10 +7,8 @@ varying vec2 uv_one_rot;
 varying float size_mod;
 
 void vertex() {
-	float x = .10;
-	float y = 1.0;
-	uv_center_rot = UV_generate_from_center(UV,vec2(0),vec2(x,y),TIME*50.0);
-	uv_one_rot = UV_generate_from_center(UV,vec2(0),vec2(x,y),90.0+TIME*50.0);
+	uv_center_rot = UV_generate_from_center(UV,vec2(0),vec2(1),TIME*50.0);
+	uv_one_rot = UV_generate_from_center(UV,vec2(0),vec2(1),90.0+TIME*50.0);
 	float animationSeconds = 2.0;
 	float sineVal = 1.0 - sin((PI*2.0)*(TIME-0.75)/animationSeconds)/2.0+0.5;
 	size_mod = sineVal;

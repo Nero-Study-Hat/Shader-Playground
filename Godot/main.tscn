@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfhk0t4ykdb5x"]
 
-[ext_resource type="Shader" path="res://Shaders/main/animated_spinning_clover.gdshader" id="1_73wv3"]
+[ext_resource type="Shader" path="res://Shaders/main/test.gdshader" id="1_m6b7j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6dcf2"]
-shader = ExtResource("1_73wv3")
+shader = ExtResource("1_m6b7j")
 
 [node name="Main" type="Node2D"]
 
