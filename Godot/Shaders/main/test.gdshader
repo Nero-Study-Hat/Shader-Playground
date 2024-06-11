@@ -2,22 +2,23 @@ shader_type canvas_item;
 
 #include "res://Shaders/lib/main.gdshaderinc"
 
+vec2 _transformUV(vec2 _uv_transform, vec2 _scale_uv_, vec2 _pivot_scale_uv_){
+	_uv_transform = (_uv_transform - _pivot_scale_uv_) * _scale_uv_ + _pivot_scale_uv_; // zoom
+	return _uv_transform;
+}
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
-void fragment() {
-	vec2 uv_center = new_uv_from_center(UV,0,0,0);
-	float size_modifier = 1.0 - 0.0;
-	vec3 x = vec3(uv_center.x * size_modifier * uv_center.x * size_modifier);
-	vec3 y = vec3(uv_center.y * size_modifier * uv_center.y * size_modifier);
-	vec4 circle = vec4(2.0*x + 2.0*y,1);
+void fragment() {	
+	vec2 uvc = UV_generate_from_center(UV,vec2(0),vec2(100),0);
+	vec4 circle = SH_new_circle(uvc,0.01);
+	vec4 rec = SH_new_rectangle(uvc,0.01, true);
 	
-	vec3 rec_y = vec3(uv_center.y * size_modifier * uv_center.y * size_modifier);
-	vec4 rec = vec4(4.0 * rec_y,1);
+	COLOR = vec4(uvc,0,1);
+	COLOR = circle/rec + circle;
 	
-	COLOR = circle / rec + circle;
-	COLOR = circle / rec;
 }
 
 //void light() {
