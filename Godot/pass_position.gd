@@ -8,4 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#var shader_value = material.get_shader_parameter("resolution")
+	#shader_value = scale
 	pass

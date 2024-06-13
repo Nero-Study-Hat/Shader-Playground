@@ -1,17 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfhk0t4ykdb5x"]
+[gd_scene load_steps=3 format=3 uid="uid://bfhk0t4ykdb5x"]
 
 [ext_resource type="Shader" path="res://Shaders/main/test.gdshader" id="1_m6b7j"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ys8wf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1hf0o"]
 shader = ExtResource("1_m6b7j")
-shader_parameter/res = Vector2(111, 549)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_hnh6q"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ys8wf")
-position = Vector2(575, 323.5)
-scale = Vector2(1152, 643)
-texture = SubResource("CanvasTexture_hnh6q")
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_right = 1154.0
+offset_bottom = 646.0
+
+[node name="ColorRect" type="ColorRect" parent="AspectRatioContainer"]
+material = SubResource("ShaderMaterial_1hf0o")
+layout_mode = 2
